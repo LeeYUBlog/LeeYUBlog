@@ -7,7 +7,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 
 @Configuration
 @EnableAutoConfiguration
-@ComponentScan("com.LeeYUBlog.admin.controller")
+@ComponentScan("com.LeeYUBlog.admin")
 public class ApplicationConfiguration extends WebMvcConfigurerAdapter{
 
 }
