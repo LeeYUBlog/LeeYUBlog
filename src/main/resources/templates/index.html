@@ -26,6 +26,12 @@
     <![endif]-->
   </head>
   <body class="home blog">
+  <!-- test login -->
+  <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+  <form th:action="@{/logout}" method="post">
+      <input type="submit" value="Sign Out"/>
+  </form>
+  <!-- end -->
     <div id="page" class="site">
       <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
 
