@@ -1,9 +1,10 @@
-package com.LeeYUBlog.admin.portfolio.controller;
+package com.LeeYUBlog.common.portfolio.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping("/common")
 public class PortfolioController {
 
 	@RequestMapping("/portfolio.html")

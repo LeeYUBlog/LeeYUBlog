@@ -1,12 +1,12 @@
-package com.LeeYUBlog.admin.controller;
+package com.LeeYUBlog.common.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class AdminController {
+public class LandPageController {
 	
-	@RequestMapping(value={"/home","/"})
+	@RequestMapping(value={"/home","/","/index.html"})
 	public String displayLanding(){
 		return "index";
 	}

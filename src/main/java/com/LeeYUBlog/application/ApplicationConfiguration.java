@@ -8,7 +8,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @SuppressWarnings("deprecation")
 @Configuration
 @EnableAutoConfiguration
-@ComponentScan("com.LeeYUBlog.admin")
+@ComponentScan({"com.LeeYUBlog.common","com.LeeYUBlog.user"})
 public class ApplicationConfiguration extends WebMvcConfigurerAdapter{
 	
 }

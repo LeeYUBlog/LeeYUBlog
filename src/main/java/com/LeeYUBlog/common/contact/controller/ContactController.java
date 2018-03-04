@@ -1,9 +1,10 @@
-package com.LeeYUBlog.admin.contact.controller;
+package com.LeeYUBlog.common.contact.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping("/common")
 public class ContactController {
 	
 	@RequestMapping("/contact.html")
