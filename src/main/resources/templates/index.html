@@ -43,10 +43,10 @@
   </head>
   <body class="home blog">
   <!-- test login -->
-  <!-- <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
+  <h1 th:inline="text">Hello [[${#httpServletRequest.remoteUser}]]!</h1>
   <form th:action="@{/logout}" method="post">
       <input type="submit" value="Sign Out"/>
-  </form> -->
+  </form>
   <!-- end -->
     <div id="page" class="site">
       <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
@@ -530,12 +530,18 @@
       </section><!-- #copyright -->
 
     </div><!-- #page -->
-	
+	<input id="user_input" type="text" th:value="${param.error}" style="display:none">
 	<div class="log-form" style="display:none">
 	  <h2>Login to your account</h2>
-	  <form>
-	    <input type="text" title="username" placeholder="username" />
-	    <input type="password" title="username" placeholder="password" />
+	  <div th:if="${param.error}">
+	   	<span style="color: red">Invalid username and password</span>
+	  </div>
+	  <div th:if="${param.logout}">
+		<span style="color: red">You have been logged out</span>
+	  </div>
+	  <form th:action="@{/login}" method="post">
+	    <input type="text" type="text" name="username" placeholder="username"/>
+	    <input type="password" type="password" name="password" placeholder="password"/>
 	    <button type="submit" class="btn">Login</button>
 	    <button id="cancelbtn" type="button" class="btn">Cancel</button>
 	    <a class="forgot" href="#">Forgot Username?</a>
