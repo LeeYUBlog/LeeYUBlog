@@ -36,7 +36,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 			.inMemoryAuthentication()
 				.withUser("user").password("password").roles("USER");*/
 		//JDBC Authentication
-		@SuppressWarnings("deprecation")
+		@SuppressWarnings({ "deprecation", "unused" })
 		UserBuilder users = User.withDefaultPasswordEncoder();
 		
 		auth
