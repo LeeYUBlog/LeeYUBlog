@@ -16,4 +16,10 @@ $(function(){
 	$("#cancelbtn").click(function(){
 		$(".log-form").prop("style","display:none");
 	});
+	
+	/*1秒渐显效果*/
+	$(".loginMsg").fadeIn(1000);
+	
+	/*3秒渐隐效果*/
+	$(".loginMsg").fadeOut(3000);
 });
