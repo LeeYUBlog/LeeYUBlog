@@ -16,8 +16,4 @@ public class UserController {
 		return "index";
 	}
 	
-	@RequestMapping(value="/backstage")
-	public String backstage() {
-		return "backstage";
-	}
 }
