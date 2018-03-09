@@ -25,7 +25,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 			.formLogin()
 				.loginPage("/login")
 				/*登陆成功后跳转到后台页面*/
-				.defaultSuccessUrl("/backstage")
+				.defaultSuccessUrl("/admin")
 				.failureUrl("/login?error")
 				.permitAll()
 				.and()
