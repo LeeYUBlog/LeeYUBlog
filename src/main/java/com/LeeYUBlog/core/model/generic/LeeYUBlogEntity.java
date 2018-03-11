@@ -9,7 +9,7 @@ import org.hibernate.Hibernate;
 import com.LeeYUBlog.core.model.generic.LeeYUBlogEntity;
 
 /**
- * <p>Entity实体通过JPA持久化 </p>
+ * <p>Entity JPA Persistence </p>
  *
  * @param <E> type of entity
  */
