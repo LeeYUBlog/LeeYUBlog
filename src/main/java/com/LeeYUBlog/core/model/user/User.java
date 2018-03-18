@@ -1,4 +1,4 @@
-package com.LeeYUBlog.core.model;
+package com.LeeYUBlog.core.model.user;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -53,7 +53,7 @@ public class User extends LeeYUBlogEntity<Long, User> implements Auditable{
 	public User(String userName, String password){
 		
 		this.adminName = userName;
-		
+		this.adminPassword = password;
 	}
 	
 	@NotEmpty
@@ -78,6 +78,9 @@ public class User extends LeeYUBlogEntity<Long, User> implements Auditable{
 	@NotEmpty
 	@Column(name = "ADMIN_PASSWORD", length = 60)
 	private String adminPassword;
+	
+	@Column(name="ACTIVE")
+	private boolean active = true;
 	
 	@Embedded
 	private AuditSection auditSection = new AuditSection();
@@ -132,6 +135,14 @@ public class User extends LeeYUBlogEntity<Long, User> implements Auditable{
 
 	public void setAdminPassword(String adminPassword) {
 		this.adminPassword = adminPassword;
+	}
+	
+	public void setActive(boolean active) {
+		this.active = active;
+	}
+
+	public boolean isActive() {
+		return active;
 	}
 
 	public Date getLastAccess() {

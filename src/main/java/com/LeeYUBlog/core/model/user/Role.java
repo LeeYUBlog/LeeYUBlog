@@ -1,9 +1,11 @@
-package com.LeeYUBlog.core.model;
+package com.LeeYUBlog.core.model.user;
 
 import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
 import javax.persistence.EntityListeners;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -35,6 +37,10 @@ public class Role extends LeeYUBlogEntity<Integer, Role> implements Auditable{
 	public Role() {
 		
 	}
+	
+	@Column (name = "ROLE_TYPE")
+	@Enumerated(value = EnumType.STRING)
+	private RoleType roleType;
 	
 	@Column(name = "ROLE_DESC")
 	private String description;
