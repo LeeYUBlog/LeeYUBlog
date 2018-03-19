@@ -91,5 +91,13 @@ public class Role extends LeeYUBlogEntity<Integer, Role> implements Auditable{
 	public void setRoleName(String roleName) {
 		this.roleName = roleName;
 	}
+	
+	public void setRoleType(RoleType roleType) {
+		this.roleType = roleType;
+	}
+
+	public RoleType getRoleType() {
+		return roleType;
+	}
 
 }
