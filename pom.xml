@@ -1,20 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.example</groupId>
 	<artifactId>leeyuBlog</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<version>0.0.2-SNAPSHOT</version>
+	<packaging>pom</packaging>
 
 	<name>leeyuBlog</name>
-	<description>Demo project for Spring Boot</description>
+	<description>LeeYUBlog System</description>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
+		<leeYUBlog.version>0.0.2-SNAPSHOT</leeYUBlog.version>
+		<com.alibaba.druid.version>1.1.8</com.alibaba.druid.version>
+		<spring-boot-starter-thymeleaf-version>1.5.10.RELEASE</spring-boot-starter-thymeleaf-version>
+		<net.sourceforge.nekohtml.version>1.9.22</net.sourceforge.nekohtml.version>
+		<spring-boot-devtools-version>1.5.10.RELEASE</spring-boot-devtools-version>
+		<mysql-connector-java-version>5.1.45</mysql-connector-java-version>
+		<spring-boot-starter-tomcat-version>1.5.10.RELEASE</spring-boot-starter-tomcat-version>
+		<spring-boot-starter-test-version>1.5.10.RELEASE</spring-boot-starter-test-version>
+		<com.fasterxml.jackson.core.version>2.9.4</com.fasterxml.jackson.core.version>
+		<javax.inject.version>1</javax.inject.version>
+		<commons-lang3-version>3.7</commons-lang3-version>
 	</properties>
 
 
@@ -23,22 +33,18 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
-			<version>1.5.10.RELEASE</version>
 		</dependency>
 		<dependency>
 		    <groupId>com.alibaba</groupId>
 		    <artifactId>druid</artifactId>
-		    <version>1.1.8</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
-			<version>1.5.10.RELEASE</version>
 		</dependency>
 		<dependency>
 		    <groupId>net.sourceforge.nekohtml</groupId>
 		    <artifactId>nekohtml</artifactId>
-		    <version>1.9.22</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.security</groupId>
@@ -51,24 +57,20 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
-			<version>1.5.10.RELEASE</version>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
 		    <groupId>mysql</groupId>
 		    <artifactId>mysql-connector-java</artifactId>
-		    <version>5.1.45</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
-			<version>1.5.10.RELEASE</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
-			<version>1.5.10.RELEASE</version>
 			<scope>test</scope>
 		</dependency>
 		
@@ -79,17 +81,14 @@
 		<dependency>
 		    <groupId>com.fasterxml.jackson.core</groupId>
 		    <artifactId>jackson-databind</artifactId>
-		    <version>2.9.4</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.inject</groupId>
 			<artifactId>javax.inject</artifactId>
-			<version>1</version>
 		</dependency>
 		<dependency>
 		    <groupId>org.apache.commons</groupId>
 		    <artifactId>commons-lang3</artifactId>
-		    <version>3.7</version>
 		</dependency>
 	</dependencies>
 	
@@ -118,10 +117,68 @@
 			    <version>5.0.3.RELEASE</version>
 			</dependency>
 			<dependency>
-		    <groupId>org.projectlombok</groupId>
-		    <artifactId>lombok</artifactId>
-		    <version>1.16.20</version>
-		</dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-data-jpa</artifactId>
+				<version>1.5.10.RELEASE</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-thymeleaf</artifactId>
+				<version>${spring-boot-starter-thymeleaf-version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-devtools</artifactId>
+				<version>${spring-boot-devtools-version}</version>
+				<scope>runtime</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-tomcat</artifactId>
+				<version>${spring-boot-starter-tomcat-version}</version>
+				<scope>provided</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-test</artifactId>
+				<version>${spring-boot-starter-test-version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+			    <groupId>org.projectlombok</groupId>
+			    <artifactId>lombok</artifactId>
+			    <version>1.16.20</version>
+			</dependency>
+			<dependency>
+			    <groupId>com.alibaba</groupId>
+			    <artifactId>druid</artifactId>
+			    <version>${com.alibaba.druid.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>net.sourceforge.nekohtml</groupId>
+			    <artifactId>nekohtml</artifactId>
+			    <version>${net.sourceforge.nekohtml.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>mysql</groupId>
+			    <artifactId>mysql-connector-java</artifactId>
+			    <version>${mysql-connector-java-version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>com.fasterxml.jackson.core</groupId>
+			    <artifactId>jackson-databind</artifactId>
+			    <version>${com.fasterxml.jackson.core.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>javax.inject</groupId>
+				<artifactId>javax.inject</artifactId>
+				<version>${javax.inject.version}</version>
+			</dependency>
+			<dependency>
+			    <groupId>org.apache.commons</groupId>
+			    <artifactId>commons-lang3</artifactId>
+			    <version>${commons-lang3-version}</version>
+			</dependency>
 		</dependencies> 
 	</dependencyManagement>
 	
@@ -156,5 +213,10 @@
 		</plugins>
 	</build>
 
-
+	<modules>
+		<module>leeyuBlog-core</module>
+		<module>leeyuBlog-web</module>
+		<module>leeyuBlog-model</module>
+		<module>leeyuBlog-core-modules</module>
+	</modules>
 </project>
