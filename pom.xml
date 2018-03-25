@@ -216,7 +216,7 @@
 	<modules>
 		<module>leeyuBlog-core</module>
 		<module>leeyuBlog-web</module>
-		<module>leeyuBlog-model</module>
 		<module>leeyuBlog-core-modules</module>
+		<module>leeyuBlog-core-model</module>
 	</modules>
 </project>
