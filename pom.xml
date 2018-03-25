@@ -14,7 +14,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<java.version>1.8</java.version>
-		<leeYUBlog.version>0.0.2-SNAPSHOT</leeYUBlog.version>
+		<leeyuBlog.version>0.0.2-SNAPSHOT</leeyuBlog.version>
 		<com.alibaba.druid.version>1.1.8</com.alibaba.druid.version>
 		<spring-boot-starter-thymeleaf-version>1.5.10.RELEASE</spring-boot-starter-thymeleaf-version>
 		<net.sourceforge.nekohtml.version>1.9.22</net.sourceforge.nekohtml.version>
@@ -25,15 +25,17 @@
 		<com.fasterxml.jackson.core.version>2.9.4</com.fasterxml.jackson.core.version>
 		<javax.inject.version>1</javax.inject.version>
 		<commons-lang3-version>3.7</commons-lang3-version>
+		<spring-framework-bom-version>5.0.4.RELEASE</spring-framework-bom-version>
+		<spring-security-web-version>5.0.3.RELEASE</spring-security-web-version>
+		<spring-security-config-version>5.0.3.RELEASE</spring-security-config-version>
+		<spring-security-core-version>5.0.3.RELEASE</spring-security-core-version>
+		<spring-boot-starter-data-jpa-version>1.5.10.RELEASE</spring-boot-starter-data-jpa-version>
+		<org.projectlombok.version>1.16.20</org.projectlombok.version>
 	</properties>
 
 
 	<dependencies>
 	
-		<dependency>
-			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-data-jpa</artifactId>
-		</dependency>
 		<dependency>
 		    <groupId>com.alibaba</groupId>
 		    <artifactId>druid</artifactId>
@@ -47,14 +49,6 @@
 		    <artifactId>nekohtml</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-web</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.security</groupId>
-			<artifactId>spring-security-config</artifactId>
-		</dependency>
-		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<scope>runtime</scope>
@@ -63,25 +57,21 @@
 		    <groupId>mysql</groupId>
 		    <artifactId>mysql-connector-java</artifactId>
 		</dependency>
-		<dependency>
+		<!-- <dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 			<scope>provided</scope>
-		</dependency>
+		</dependency> -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 		
-		<dependency>
-		    <groupId>org.projectlombok</groupId>
-		    <artifactId>lombok</artifactId>
-		</dependency>
-		<dependency>
+		<!-- <dependency>
 		    <groupId>com.fasterxml.jackson.core</groupId>
 		    <artifactId>jackson-databind</artifactId>
-		</dependency>
+		</dependency> -->
 		<dependency>
 			<groupId>javax.inject</groupId>
 			<artifactId>javax.inject</artifactId>
@@ -94,32 +84,32 @@
 	
 	<dependencyManagement> 
 		<dependencies> 
-		<dependency> 
-			<groupId>org.springframework</groupId> 
-			<artifactId>spring-framework-bom</artifactId> 
-			<version>5.0.4.RELEASE</version> 
-			<type>pom</type> 
-			<scope>import</scope> 
-		</dependency>
-		<dependency>
+			<dependency> 
+				<groupId>org.springframework</groupId> 
+				<artifactId>spring-framework-bom</artifactId> 
+				<version>${spring-framework-bom-version}</version> 
+				<type>pom</type> 
+				<scope>import</scope> 
+			</dependency>
+			<dependency>
 				<groupId>org.springframework.security</groupId>
 				<artifactId>spring-security-web</artifactId>
-				<version>5.0.3.RELEASE</version>
+				<version>${spring-security-web-version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework.security</groupId>
 				<artifactId>spring-security-config</artifactId>
-				<version>5.0.3.RELEASE</version>
+				<version>${spring-security-config-version}</version>
 			</dependency>
 			<dependency>
 			    <groupId>org.springframework.security</groupId>
 			    <artifactId>spring-security-core</artifactId>
-			    <version>5.0.3.RELEASE</version>
+			    <version>${spring-security-core-version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-starter-data-jpa</artifactId>
-				<version>1.5.10.RELEASE</version>
+				<version>${spring-boot-starter-data-jpa-version}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
@@ -147,7 +137,7 @@
 			<dependency>
 			    <groupId>org.projectlombok</groupId>
 			    <artifactId>lombok</artifactId>
-			    <version>1.16.20</version>
+			    <version>${org.projectlombok.version}</version>
 			</dependency>
 			<dependency>
 			    <groupId>com.alibaba</groupId>

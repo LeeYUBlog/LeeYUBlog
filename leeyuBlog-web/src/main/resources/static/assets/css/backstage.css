@@ -1,0 +1,370 @@
+@charset "UTF-8";
+*, *:before, *:after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  color: #676f7d;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Raleway, Open Sans, Arial;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.5;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  width: 100%;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.page-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+}
+
+/**
+ * AdminSidebar, PostEditor, and DetailsSidebar are the three panes shown
+ */
+.AdminSidebar {
+  background-color: #282c37;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 170px;
+          flex: 0 0 170px;
+  padding: 20px 0;
+  position: relative;
+}
+
+.PostEditor {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.DetailsSidebar {
+  border-left: 1px solid #c6cad0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 300px;
+          flex: 0 0 300px;
+  padding: 20px 0 0;
+}
+
+/**
+ * This container is used to make the sidebar fixed 
+ * 
+ * 1. Needed because for some reason the container 
+ * isn't full width of the sidebar
+ */
+.AdminSidebar__container {
+  background-color: #282c37;
+  position: fixed;
+  height: 100%;
+  width: 170px;
+  /* [1] */
+}
+
+.AdminSidebar__list__item {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin: 0 0 18px 0;
+  padding: 0 30px;
+}
+
+.AdminSidebar__sublist__item {
+  font-size: 11.5px;
+  padding: 3px 0;
+}
+
+.AdminSidebar__link {
+  display: block;
+  text-transform: capitalize;
+}
+.AdminSidebar__link:link, .AdminSidebar__link:visited {
+  color: #676f7d;
+}
+.AdminSidebar__link:hover, .AdminSidebar__link:link {
+  color: white;
+}
+.AdminSidebar__link.is-active:link, .AdminSidebar__link.is-active:visited {
+  color: white;
+}
+.AdminSidebar__link.is-active:after {
+  content: '';
+  position: absolute;
+  right: 0;
+  height: 0;
+  width: 0;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid white;
+  border-top: 10px solid transparent;
+}
+
+.Logo {
+  background-color: white;
+  border-radius: 100%;
+  border: 2px solid white;
+  color: #282c37;
+  font-size: 24px;
+  line-height: 40px;
+  margin: 0 30px 40px;
+  text-align: center;
+  height: 40px;
+  width: 40px;
+}
+
+/**
+ * Container for the text area
+ */
+.PostEditor {
+  position: relative;
+  padding: 20px 0;
+  width: 100%;
+}
+
+/**
+ * Restricts the width of the elements. 
+ */
+.PostEditor__container {
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 0 30px;
+  position: relative;
+  width: 100%;
+}
+
+/**
+ * Title for post being edited 
+ */
+.PostEditor__title {
+  border-bottom: 1px solid #c6cad0;
+  font-size: 32px;
+  margin: 20px 0 40px;
+  width: 100%;
+}
+
+/**
+ * Text area for post editing
+ */
+.PostEditor__textarea {
+  border: 1px solid #c6cad0;
+  border-right: 0;
+  line-height: 2;
+  outline: 0;
+  padding: 8px;
+  overflow-y: scroll;
+  height: 600px;
+  width: 100%;
+}
+.PostEditor__textarea::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+.PostEditor__textarea::-webkit-scrollbar-track {
+  background-color: #ddd;
+}
+.PostEditor__textarea::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+.PostEditor__textarea::-moz-selection {
+  background-color: rgba(44, 146, 218, 0.3);
+}
+.PostEditor__textarea::selection {
+  background-color: rgba(44, 146, 218, 0.3);
+}
+
+/**
+ * 
+ */
+.Badge {
+  background-color: #2c92da;
+  border-radius: 100%;
+  color: white;
+  display: inline-block;
+  font-size: 0.65em;
+  font-weight: 400;
+  line-height: 1.8em;
+  text-align: center;
+  height: 1.8em;
+  width: 1.8em;
+}
+
+/**
+ * The tooltip menu showing when text is selected 
+ */
+.EditOptions {
+  background-color: #282c37;
+  border-radius: 100px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  line-height: 44px;
+  padding: 0 12px;
+  position: absolute;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  z-index: 10;
+}
+
+/**
+ * Arrow under the options
+ */
+.EditOptions:before {
+  content: '';
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  height: 0;
+  width: 0;
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+  border-top: 10px solid #282c37;
+}
+
+.EditOptions__item {
+  color: white;
+  cursor: pointer;
+  font-weight: 400;
+  font-size: 14px;
+  padding: 0px 10px;
+}
+
+.EditOptions__item:hover {
+  color: #2c92da;
+}
+
+/**
+ * Widgets for items in the details sidebar
+ */
+.Widget {
+  margin: 20px 30px 40px;
+  font-size: 14px;
+}
+
+/**
+ * Title of the widget
+ */
+.Widget__title {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  border-bottom: 1px solid #c6cad0;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 0 0 6px;
+  margin: 0 0 18px;
+  position: relative;
+}
+
+/**
+ * The collapse button in the title
+ */
+.Widget__collapse {
+  color: #2c92da;
+  cursor: pointer;
+  font-size: 15px;
+  padding: 4px;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  position: absolute;
+  top: 50%;
+  right: 0;
+}
+
+.Widget__detail {
+  margin-bottom: 8px;
+  text-transform: capitalize;
+}
+.Widget__detail > span {
+  display: inline-block;
+}
+.Widget__detail > span:first-child {
+  min-width: 80px;
+}
+
+.Widget__buttons {
+  padding: 8px 0 0;
+}
+
+.OptionsList__item {
+  cursor: pointer;
+  font-size: 12px;
+  margin: 6px 0;
+  padding-left: 18px;
+  position: relative;
+  font-weight: 600;
+}
+.OptionsList__item:hover {
+  color: #393d45;
+}
+.OptionsList__item.is-selected:before {
+  content: "\2713";
+  color: #2c92da;
+  font-weight: bold;
+  left: 0;
+  position: absolute;
+}
+
+.Button {
+  background-color: white;
+  border: 0;
+  border-radius: 100px;
+  color: #676f7d;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 1px;
+  line-height: 34px;
+  padding: 0 24px;
+  text-transform: capitalize;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.Button:link, .Button:visited {
+  color: #676f7d;
+}
+
+.Button--primary {
+  background-color: #2c92da;
+  color: white;
+}
+.Button--primary:link, .Button--primary:visited {
+  background-color: #2c92da;
+  color: white;
+}
+
+/**
+ * Helper classes
+ */
+.u-font-bold {
+  font-weight: bold;
+}
+
+.u-font-italic {
+  font-style: italic;
+}
+
+.u-font-cap {
+  text-transform: capitalize;
+}
+
+/**
+ * p.s. Flexbox is amazing
+ */

@@ -10,12 +10,33 @@
   
   <artifactId>leeyuBlog-web</artifactId>
   <packaging>war</packaging>
+  
   <name>leeyuBlog-web</name>
   <url>http://maven.apache.org</url>
+  
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <main.basedir>${basedir}/../..</main.basedir>
+    <m2eclipse.wtp.contextRoot>/</m2eclipse.wtp.contextRoot>
   </properties>
   <dependencies>
   
+  	<!-- leeyuBlog-core -->
+  	<dependency>
+  		<groupId>com.example</groupId>
+  		<artifactId>leeyuBlog-core</artifactId>
+  		<version>${leeyuBlog.version}</version>	
+  	</dependency>
+  	
+  	<!-- spring security -->
+  	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-web</artifactId>
+	</dependency>
+	<dependency>
+		<groupId>org.springframework.security</groupId>
+		<artifactId>spring-security-config</artifactId>
+	</dependency>
+  	
   </dependencies>
 </project>

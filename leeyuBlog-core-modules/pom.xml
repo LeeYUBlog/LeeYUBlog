@@ -11,6 +11,7 @@
   
   <artifactId>leeyuBlog-core-modules</artifactId>
   <packaging>jar</packaging>
+  
   <name>leeyuBlog-core-modules</name>
   <url>http://maven.apache.org</url>
   
@@ -19,5 +20,11 @@
   </properties>
   
   <dependencies>
+  	<!-- leeyuBlog-core-model -->
+  	<dependency>
+  		<groupId>com.example</groupId>
+  		<artifactId>leeyuBlog-core-model</artifactId>
+  		<version>${leeyuBlog.version}</version>
+  	</dependency>
   </dependencies>
 </project>
