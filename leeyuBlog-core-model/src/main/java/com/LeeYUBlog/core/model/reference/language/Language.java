@@ -27,9 +27,9 @@ public class Language extends LeeYUBlogEntity<Integer, Language> implements Audi
 	
 	@Id
 	@Column(name="LANGUAGE_ID")
-	@TableGenerator(name = "TABLE_GEN", table = "SM_SEQUENCER", pkColumnName = "SEQ_NAME", valueColumnName = "SEQ_COUNT",
+	@TableGenerator(name = "TABLE1_GEN", table = "SM_SEQUENCER", pkColumnName = "SEQ_NAME", valueColumnName = "SEQ_COUNT",
 	pkColumnValue = "LANG_SEQ_NEXT_VAL")
-	@GeneratedValue(strategy = GenerationType.TABLE, generator = "TABLE_GEN")
+	@GeneratedValue(strategy = GenerationType.TABLE, generator = "TABLE1_GEN")
 	private Integer id;
 	
 	@Embedded

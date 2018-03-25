@@ -11,8 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.TableGenerator;
-
-import org.hibernate.validator.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 import com.LeeYUBlog.core.constants.SchemaConstant;
 import com.LeeYUBlog.core.model.common.audit.AuditSection;
@@ -30,8 +29,8 @@ public class Role extends LeeYUBlogEntity<Integer, Role> implements Auditable{
 	private static final long serialVersionUID = 5577584441927841167L;
 	@Id
 	@Column(name = "ROLE_ID", unique = true, nullable = false)
-	@TableGenerator(name = "TABLE_GEN", table = "SM_SEQENCER", pkColumnName = "SEQ_NAME", valueColumnName = "SEQ_COUNT", pkColumnValue = "ROLE_SEQ_NEXT_VAL")
-	@GeneratedValue(strategy = GenerationType.TABLE, generator = "TABLE_GEN")
+	@TableGenerator(name = "TABLE3_GEN", table = "SM_SEQUENCER", pkColumnName = "SEQ_NAME", valueColumnName = "SEQ_COUNT", pkColumnValue = "ROLE_SEQ_NEXT_VAL")
+	@GeneratedValue(strategy = GenerationType.TABLE, generator = "TABLE3_GEN")
 	private Integer id;
 	
 	public Role() {
@@ -45,7 +44,7 @@ public class Role extends LeeYUBlogEntity<Integer, Role> implements Auditable{
 	@Column(name = "ROLE_DESC")
 	private String description;
 	
-	@NotEmpty
+	@NotNull
 	@Column(name = "ROLE_NAME", unique = true)
 	private String roleName;
 	

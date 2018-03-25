@@ -20,9 +20,9 @@ import javax.persistence.Table;
 import javax.persistence.TableGenerator;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.NotNull;
 
 import org.hibernate.annotations.Cascade;
-import org.hibernate.validator.constraints.NotEmpty;
 
 import com.LeeYUBlog.core.constants.SchemaConstant;
 import com.LeeYUBlog.core.model.common.audit.AuditListener;
@@ -42,8 +42,8 @@ public class User extends LeeYUBlogEntity<Long, User> implements Auditable{
 	
 	@Id
 	@Column(name = "USER_ID", unique=true, nullable=false)
-	@TableGenerator(name = "TABLE_GEN", table = "SM_SEQUENCER", pkColumnName = "SEQ_NAME", valueColumnName = "SEQ_COUNT", pkColumnValue = "USER_SEQ_NEXT_VAL")
-	@GeneratedValue(strategy = GenerationType.TABLE, generator = "TABLE_GEN")
+	@TableGenerator(name = "TABLE4_GEN", table = "SM_SEQUENCER", pkColumnName = "SEQ_NAME", valueColumnName = "SEQ_COUNT", pkColumnValue = "USER_SEQ_NEXT_VAL")
+	@GeneratedValue(strategy = GenerationType.TABLE, generator = "TABLE4_GEN")
 	private Long id;
 	
 	public User(){
@@ -56,7 +56,7 @@ public class User extends LeeYUBlogEntity<Long, User> implements Auditable{
 		this.adminPassword = password;
 	}
 	
-	@NotEmpty
+	@NotNull
 	@Column(name = "ADMIN_NAME", length=100, unique=true)
 	private String adminName;
 	
@@ -75,7 +75,7 @@ public class User extends LeeYUBlogEntity<Long, User> implements Auditable{
 	})
 	private List<Role> roles = new ArrayList<Role>();
 	
-	@NotEmpty
+	@NotNull
 	@Column(name = "ADMIN_PASSWORD", length = 60)
 	private String adminPassword;
 	

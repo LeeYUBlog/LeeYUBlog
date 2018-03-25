@@ -3,6 +3,7 @@ package com.LeeYUBlog.core.business.services.common.generic;
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -34,7 +35,8 @@ public abstract class LeeYUBlogEntityServiceImpl<K extends Serializable & Compar
 
 
 	public E getById(K id) {
-		return repository.findOne(id);
+		Optional<E> e = repository.findById(id);
+		return e.get();
 	}
 
 	

@@ -16,20 +16,12 @@
 		<java.version>1.8</java.version>
 		<leeyuBlog.version>0.0.2-SNAPSHOT</leeyuBlog.version>
 		<com.alibaba.druid.version>1.1.8</com.alibaba.druid.version>
-		<spring-boot-starter-thymeleaf-version>1.5.10.RELEASE</spring-boot-starter-thymeleaf-version>
 		<net.sourceforge.nekohtml.version>1.9.22</net.sourceforge.nekohtml.version>
 		<spring-boot-devtools-version>1.5.10.RELEASE</spring-boot-devtools-version>
 		<mysql-connector-java-version>5.1.45</mysql-connector-java-version>
-		<spring-boot-starter-tomcat-version>1.5.10.RELEASE</spring-boot-starter-tomcat-version>
-		<spring-boot-starter-test-version>1.5.10.RELEASE</spring-boot-starter-test-version>
 		<com.fasterxml.jackson.core.version>2.9.4</com.fasterxml.jackson.core.version>
 		<javax.inject.version>1</javax.inject.version>
 		<commons-lang3-version>3.7</commons-lang3-version>
-		<spring-framework-bom-version>5.0.4.RELEASE</spring-framework-bom-version>
-		<spring-security-web-version>5.0.3.RELEASE</spring-security-web-version>
-		<spring-security-config-version>5.0.3.RELEASE</spring-security-config-version>
-		<spring-security-core-version>5.0.3.RELEASE</spring-security-core-version>
-		<spring-boot-starter-data-jpa-version>1.5.10.RELEASE</spring-boot-starter-data-jpa-version>
 		<org.projectlombok.version>1.16.20</org.projectlombok.version>
 		<org.hsqldb.version>2.4.0</org.hsqldb.version>
 	</properties>
@@ -41,6 +33,7 @@
 		    <groupId>com.alibaba</groupId>
 		    <artifactId>druid</artifactId>
 		</dependency>
+		
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-thymeleaf</artifactId>
@@ -58,21 +51,21 @@
 		    <groupId>mysql</groupId>
 		    <artifactId>mysql-connector-java</artifactId>
 		</dependency>
-		<!-- <dependency>
+		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
 			<scope>provided</scope>
-		</dependency> -->
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 		
-		<!-- <dependency>
+		<dependency>
 		    <groupId>com.fasterxml.jackson.core</groupId>
 		    <artifactId>jackson-databind</artifactId>
-		</dependency> -->
+		</dependency>
 		<dependency>
 			<groupId>javax.inject</groupId>
 			<artifactId>javax.inject</artifactId>
@@ -85,56 +78,13 @@
 	
 	<dependencyManagement> 
 		<dependencies> 
-			<dependency> 
-				<groupId>org.springframework</groupId> 
-				<artifactId>spring-framework-bom</artifactId> 
-				<version>${spring-framework-bom-version}</version> 
-				<type>pom</type> 
-				<scope>import</scope> 
-			</dependency>
 			<dependency>
-				<groupId>org.springframework.security</groupId>
-				<artifactId>spring-security-web</artifactId>
-				<version>${spring-security-web-version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework.security</groupId>
-				<artifactId>spring-security-config</artifactId>
-				<version>${spring-security-config-version}</version>
-			</dependency>
-			<dependency>
-			    <groupId>org.springframework.security</groupId>
-			    <artifactId>spring-security-core</artifactId>
-			    <version>${spring-security-core-version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter-data-jpa</artifactId>
-				<version>${spring-boot-starter-data-jpa-version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter-thymeleaf</artifactId>
-				<version>${spring-boot-starter-thymeleaf-version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-devtools</artifactId>
-				<version>${spring-boot-devtools-version}</version>
-				<scope>runtime</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter-tomcat</artifactId>
-				<version>${spring-boot-starter-tomcat-version}</version>
-				<scope>provided</scope>
-			</dependency>
-			<dependency>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-starter-test</artifactId>
-				<version>${spring-boot-starter-test-version}</version>
-				<scope>test</scope>
-			</dependency>
+                <groupId>io.spring.platform</groupId>
+                <artifactId>platform-bom</artifactId>
+                <version>Cairo-RC1</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
 			<dependency>
 			    <groupId>org.projectlombok</groupId>
 			    <artifactId>lombok</artifactId>
@@ -179,6 +129,19 @@
 		</dependencies> 
 	</dependencyManagement>
 	
+	<repositories>
+        <repository>
+            <id>spring-milestones</id>
+            <url>http://repo.spring.io/libs-milestone</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>spring-milestones</id>
+            <url>http://repo.spring.io/libs-milestone</url>
+        </pluginRepository>
+    </pluginRepositories>
+    
 	<build>
 		<plugins>
 			<plugin>
