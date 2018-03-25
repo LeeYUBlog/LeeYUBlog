@@ -31,6 +31,7 @@
 		<spring-security-core-version>5.0.3.RELEASE</spring-security-core-version>
 		<spring-boot-starter-data-jpa-version>1.5.10.RELEASE</spring-boot-starter-data-jpa-version>
 		<org.projectlombok.version>1.16.20</org.projectlombok.version>
+		<org.hsqldb.version>2.4.0</org.hsqldb.version>
 	</properties>
 
 
@@ -155,6 +156,11 @@
 			    <version>${mysql-connector-java-version}</version>
 			</dependency>
 			<dependency>
+			    <groupId>org.hsqldb</groupId>
+			    <artifactId>hsqldb</artifactId>
+			    <version>${org.hsqldb.version}</version>
+			</dependency>
+			<dependency>
 			    <groupId>com.fasterxml.jackson.core</groupId>
 			    <artifactId>jackson-databind</artifactId>
 			    <version>${com.fasterxml.jackson.core.version}</version>
@@ -169,6 +175,7 @@
 			    <artifactId>commons-lang3</artifactId>
 			    <version>${commons-lang3-version}</version>
 			</dependency>
+			
 		</dependencies> 
 	</dependencyManagement>
 	
