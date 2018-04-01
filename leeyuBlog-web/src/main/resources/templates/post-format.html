@@ -27,82 +27,7 @@
   </head>
   <body class="home blog">
     <div id="page" class="site">
-      <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
-
-      <div class="site-header-affix-wrapper">
-        <header id="masthead" class="site-header header-dark" role="banner">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-3">
-                <div class="site-branding">
-                  <!-- //site-title when you use logo image.
-                  <h1 class="site-title title-image"><a href="index.html" rel="home"><img src="../assets/img/danish-image-logo.png" alt="Danish."></a></h1>
-                  -->
-                  <h1 class="site-title"><a href="/index.html" rel="home">Danish.</a></h1>
-                  <!-- //site-description if you wanna use it.
-                  <p class="site-description">Traveler and Young Designer //</p>
-                  -->
-                </div><!-- .site-branding -->
-              </div><!-- .col-sm-4 -->
-
-              <div class="col-sm-9">
-                <nav id="site-navigation" class="main-navigation" role="navigation">
-                  <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-align-left"></i><span class="sr-only">Primary Menu</span></button>
-
-                  <div class="menu-testing-menu-container">
-                    <ul id="primary-menu" class="menu nav-menu" aria-expanded="false">
-                      <li class="menu-item menu-item-has-children" aria-haspopup="true"><a href="#">Home</a>
-                        <ul class="sub-menu">
-                          <li class="menu-item"><a href="/index.html">Home classic</a></li>
-                          <li class="menu-item"><a href="/common/index-classic-fullwidth.html">Home classic fullwidth</a></li>
-                          <li class="menu-item"><a href="/common/index-classic-fullwidth-alt.html">Home classic fullwidth alt.</a></li>
-                          <li class="menu-item"><a href="/common/index-grid-fullwidth.html">Home grid fullwidth</a></li>
-                          <li class="menu-item"><a href="/common/index-grid-sidebar.html">Home grid sidebar</a></li>
-                          <li class="menu-item"><a href="/common/index-list-fullwidth.html">Home list fullwidth</a></li>
-                          <li class="menu-item"><a href="/common/index-list-sidebar.html">Home list sidebar</a></li>
-                        </ul>
-                      </li>
-                      <li class="menu-item"><a href="/common/about.html">About</a></li>
-                      <li class="menu-item"><a href="/common/contact.html">Contact</a></li>
-                      <li class="menu-item menu-item-has-children" aria-haspopup="true"><a href="#">Blog</a>
-                        <ul class="sub-menu">
-                          <li class="menu-item"><a href="/common/post-format.html">Post Formats</a></li>
-                          <li class="menu-item"><a href="#">Post Single</a>
-                            <ul class="sub-menu">
-                              <li class="menu-item"><a href="/common/single.html">Single</a></li>
-                              <li class="menu-item"><a href="/common/single-quote.html">Single Quote</a></li>
-                              <li class="menu-item"><a href="/common/single-gallery.html">Single Gallery</a></li>
-                              <li class="menu-item"><a href="/common/single-video.html">Single Video</a></li>
-                              <li class="menu-item"><a href="/common/single-audio.html">Single Audio</a></li>
-                              <li class="menu-item"><a href="/common/single-image.html">Single Image</a></li>
-                            </ul>
-                          </li>
-                        </ul>
-                      </li>
-                      <li class="menu-item menu-item-has-children" aria-haspopup="true"><a href="#">Portfolio</a>
-                        <ul class="sub-menu">
-                          <li class="menu-item"><a href="/common/portfolio.html">Portfolio</a></li>
-                          <li class="menu-item"><a href="/common/single-portfolio.html">Portfolio Single</a></li>
-                          <li class="menu-item"><a href="/common/archive-portfolio.html">Portfolio Archive</a></li>
-                        </ul>
-                      </li>
-                      <li class="menu-item menu-item-has-children" aria-haspopup="true"><a href="#">Pages</a>
-                        <ul class="sub-menu">
-                          <li class="menu-item"><a href="/common/archive.html">Archive</a></li>
-                          <li class="menu-item"><a href="/common/category.html">Category</a></li>
-                          <li class="menu-item"><a href="/common/search.html">Search</a></li>
-                          <li class="menu-item"><a href="/common/page.html">Page</a></li>
-                          <li class="menu-item"><a href="/common/404.html">404 Page</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </div>
-                </nav><!-- #site-navigation -->
-              </div><!-- .col-sm-8 -->
-            </div><!-- .row -->
-          </div><!-- .container -->
-        </header><!-- #masthead -->
-      </div><!-- .site-header-affix-wrapper -->
+      <div th:insert="header :: header"></div>
 
       <!-- #header -->
       <section id="header" style="background-image: url('../assets/img/danish-image-header.jpg');">
@@ -550,90 +475,9 @@
       </section><!-- #partner -->
 
       <!-- site-footer -->
-      <footer id="colophon" class="site-footer" role="contentinfo">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-3">
-              <section class="widget widget_tag_cloud">
-                <h3 class="widget-title">Tags</h3>
-                <div class="tagcloud">
-                  <a href="/common/archive.html">beauty</a> <a href="/common/archive.html">destiny</a>
-                  <a href="/common/archive.html">happy</a> <a href="/common/archive.html">inspiring</a>
-                  <a href="/common/archive.html">live</a> <a href="/common/archive.html">love live</a>
-                  <a href="/common/archive.html">tips</a> <a href="/common/archive.html">captions</a>
-                </div>
-              </section><!-- .widget_tag_cloud -->
-            </div><!-- .col-sm-3 -->
-
-            <div class="col-sm-3">
-              <section class="widget widget_recent_entries">
-                <h3 class="widget-title">Headline</h3>
-                <ul>
-                  <li>
-                    <a href="/common/single.html">Beauty is not just what you see</a>
-                    <span class="post-date">May 19, 2016</span>
-                  </li>
-                  <li>
-                    <a href="/common/single.html">You say: Dont leave me, but you are gone. Liar</a>
-                    <span class="post-date">May 9, 2016</span>
-                  </li>
-                  <li>
-                    <a href="/common/single.html">You never know how beautiful you are</a>
-                    <span class="post-date">May 5, 2016</span>
-                  </li>
-                </ul>
-              </section><!-- .widget_recent_entries -->
-            </div><!-- .col-sm-3 -->
-
-            <div class="col-sm-6">
-              <section class="widget danish_widget_site_info">
-                <div class="site-info">
-                  <h4 class="site-brand"><i class="fa fa-recycle"></i> Danish.</h4>
-                  <p>1024 Main Street, Jjrn Plrt Btl<br>+62 (123) 456-7890</p>
-                  <br>
-                  <p class="muted">© 2016 Brand Inc.</p>
-                  <a href="#">Terms of Service</a> <span>/</span> <a href="#">Privacy</a>
-                </div><!-- .site-info -->
-              </section><!-- .danish_widget_site_info -->
-            </div><!-- .col-sm-6 -->
-          </div><!-- .row -->
-        </div><!-- .container -->
-      </footer><!-- #site-footer -->
-
-      <!-- copyright -->
-      <section id="copyright" class="copyright">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 copy-left">
-              Copyright © 2016 <a href="http://templateninja.net"><strong>TemplateNinja</strong></a>. All Right Reserved.
-            </div><!-- .col-sm-6 -->
-
-            <div class="col-sm-6 copy-right">
-              <ul class="social-icon">
-                <li><a href="http://twitter.com/_templateninja" target="_blank" class="icon-twitter"><i class="fa fa-twitter"></i></a></li>
-                <li><a href="https://www.facebook.com/Template-Ninja-1555671317979815" target="_blank" class="icon-facebook"><i class="fa fa-facebook-square"></i></a></li>
-                <li><a href="#" target="_blank" class="icon-youtube"><i class="fa fa-youtube"></i></a></li>
-                <li><a href="https://www.instagram.com/templateninja/" target="_blank" class="icon-instagram"><i class="fa fa-instagram"></i></a></li>
-              </ul>
-            </div><!-- .col-sm-6 -->
-          </div><!-- .row -->
-        </div><!-- .container -->
-      </section><!-- #copyright -->
+      <div th:insert="footer :: footer"></div>
 
     </div><!-- #page -->
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="../assets/plugins/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="../assets/plugins/jquery.justifiedGallery.min.js"></script>
-    <script src="../assets/plugins/jquery.magnific-popup.min.js"></script>
-    <script src="../assets/plugins/imagesloaded.pkgd.min.js"></script>
-    <script src="../assets/plugins/jquery.isotope.min.js"></script>
-    <script src="../assets/plugins/masonry.pkgd.min.js"></script>
-    <script src="../assets/js/navigation.js"></script>
-    <script src="../assets/js/skip-link-focus-fix.js"></script>
-    <script src="../assets/js/script.js"></script>
 
   </body>
 </html>

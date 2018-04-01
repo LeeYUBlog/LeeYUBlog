@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description"
+	content="Responsive personal blog and portfolio template">
+<meta name="keywords"
+	content="danish, bootstrap, bootstrap theme, responsive, personal blog, portfolio">
+<meta name="author" content="template ninja">
+<title>Danish</title>
+
+<!-- Bootstrap -->
+<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link
+	href='https://fonts.googleapis.com/css?family=Noto+Serif:400italic,400'
+	rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Raleway:400,600'
+	rel='stylesheet' type='text/css'>
+<link href="assets/css/font-awesome.min.css" rel="stylesheet">
+<link href="assets/css/magnific-popup.css" rel="stylesheet">
+<link href="assets/css/style.min.css" rel="stylesheet">
+<link href="assets/css/skin/skin-skyblue.min.css" rel="stylesheet">
+
+<!-- LESS -->
+<link rel="stylesheet/less" type="text/css"
+	href="assets/less/dialog.less" />
+<script>
+	  less = {
+	    env: "development",
+	    async: false,
+	    fileAsync: false,
+	    poll: 1000,
+	    functions: {},
+	    dumpLineNumbers: "comments",
+	    relativeUrls: false,
+	    rootpath: ":/a.com/"
+	  };
+	</script>
+<script src="assets/js/less.min.js" type="text/javascript"></script>
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body class="home blog">
+	<div th:fragment="footer">
+		<!-- site-footer -->
+		<footer id="colophon" class="site-footer" role="contentinfo">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-3">
+						<section class="widget widget_tag_cloud">
+							<h3 class="widget-title">Tags</h3>
+							<div class="tagcloud">
+								<a href="/common/archive.html">beauty</a> <a
+									href="/common/archive.html">destiny</a> <a
+									href="/common/archive.html">happy</a> <a
+									href="/common/archive.html">inspiring</a> <a
+									href="/common/archive.html">live</a> <a
+									href="/common/archive.html">love live</a> <a
+									href="/common/archive.html">tips</a> <a
+									href="/common/archive.html">captions</a>
+							</div>
+						</section>
+						<!-- .widget_tag_cloud -->
+					</div>
+					<!-- .col-sm-3 -->
+
+					<div class="col-sm-3">
+						<section class="widget widget_recent_entries">
+							<h3 class="widget-title">Headline</h3>
+							<ul>
+								<li><a href="/common/single.html">Beauty is not just
+										what you see</a> <span class="post-date">May 19, 2016</span></li>
+								<li><a href="/common/single.html">You say: Dont leave
+										me, but you are gone. Liar</a> <span class="post-date">May
+										9, 2016</span></li>
+								<li><a href="/common/single.html">You never know how
+										beautiful you are</a> <span class="post-date">May 5, 2016</span></li>
+							</ul>
+						</section>
+						<!-- .widget_recent_entries -->
+					</div>
+					<!-- .col-sm-3 -->
+
+					<div class="col-sm-6">
+						<section class="widget danish_widget_site_info">
+							<div class="site-info">
+								<h4 class="site-brand">
+									<i class="fa fa-recycle"></i> Danish.
+								</h4>
+								<p>
+									1024 Main Street, Jjrn Plrt Btl<br>+62 (123) 456-7890
+								</p>
+								<br>
+								<p class="muted">© 2016 Brand Inc.</p>
+								<a href="#">Terms of Service</a> <span>/</span> <a href="#">Privacy</a>
+							</div>
+							<!-- .site-info -->
+						</section>
+						<!-- .danish_widget_site_info -->
+					</div>
+					<!-- .col-sm-6 -->
+				</div>
+				<!-- .row -->
+			</div>
+			<!-- .container -->
+		</footer>
+		<!-- #site-footer -->
+
+		<!-- copyright -->
+		<section id="copyright" class="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-6 copy-left">
+						Copyright © 2016 <a href="http://templateninja.net"><strong>TemplateNinja</strong></a>.
+						All Right Reserved.
+					</div>
+					<!-- .col-sm-6 -->
+
+					<div class="col-sm-6 copy-right">
+						<ul class="social-icon">
+							<li><a href="http://twitter.com/_templateninja"
+								target="_blank" class="icon-twitter"><i
+									class="fa fa-twitter"></i></a></li>
+							<li><a
+								href="https://www.facebook.com/Template-Ninja-1555671317979815"
+								target="_blank" class="icon-facebook"><i
+									class="fa fa-facebook-square"></i></a></li>
+							<li><a href="#" target="_blank" class="icon-youtube"><i
+									class="fa fa-youtube"></i></a></li>
+							<li><a href="https://www.instagram.com/templateninja/"
+								target="_blank" class="icon-instagram"><i
+									class="fa fa-instagram"></i></a></li>
+						</ul>
+					</div>
+					<!-- .col-sm-6 -->
+				</div>
+				<!-- .row -->
+			</div>
+			<!-- .container -->
+		</section>
+		<!-- #copyright -->
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	<script src="assets/plugins/jquery.min.js"></script>
+	<!-- Include all compiled plugins (below), or include individual files as needed -->
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+	<script src="assets/plugins/jquery.justifiedGallery.min.js"></script>
+	<script src="assets/plugins/jquery.magnific-popup.min.js"></script>
+	<script src="assets/plugins/imagesloaded.pkgd.min.js"></script>
+	<script src="assets/plugins/jquery.isotope.min.js"></script>
+	<script src="assets/plugins/masonry.pkgd.min.js"></script>
+	<script src="assets/js/navigation.js"></script>
+	<script src="assets/js/skip-link-focus-fix.js"></script>
+	<script src="assets/js/script.js"></script>
+
+	</div>
+</body>
+</html>

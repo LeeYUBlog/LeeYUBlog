@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Responsive personal blog and portfolio template">
+    <meta name="keywords" content="danish, bootstrap, bootstrap theme, responsive, personal blog, portfolio">
+    <meta name="author" content="template ninja">
+    <title>Danish</title>
+
+    <!-- Bootstrap -->
+    <link href="../assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Noto+Serif:400italic,400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:400,600' rel='stylesheet' type='text/css'>
+    <link href="../assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../assets/css/magnific-popup.css" rel="stylesheet">
+    <link href="../assets/css/style.min.css" rel="stylesheet">
+    <link href="../assets/css/skin/skin-skyblue.min.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body class="error404">
+    <div th:fragment="header :: header">
+      <a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+
+      <div class="site-header-affix-wrapper">
+        <header id="masthead" class="site-header header-dark" role="banner">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="site-branding">
+                  <!-- //site-title when you use logo image.
+                  <h1 class="site-title title-image"><a href="index.html" rel="home"><img src="../assets/img/danish-image-logo.png" alt="Danish."></a></h1>
+                  -->
+                  <h1 class="site-title"><a href="/index.html" rel="home">Danish.</a></h1>
+                  <!-- //site-description if you wanna use it.
+                  <p class="site-description">Traveler and Young Designer //</p>
+                  -->
+                </div><!-- .site-branding -->
+              </div><!-- .col-sm-4 -->
+
+              <div class="col-sm-9">
+                <nav id="site-navigation" class="main-navigation" role="navigation">
+                  <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fa fa-align-left"></i><span class="sr-only">Primary Menu</span></button>
+
+                  <div class="menu-testing-menu-container">
+                    <ul id="primary-menu" class="menu nav-menu" aria-expanded="false">
+                      <li class="menu-item menu-item-has-children" aria-haspopup="true"><a href="#">Home</a>
+                        <ul class="sub-menu">
+                          <li class="menu-item"><a href="/index.html">Home classic</a></li>
+                          <li class="menu-item"><a href="/common/index-classic-fullwidth.html">Home classic fullwidth</a></li>
+                          <li class="menu-item"><a href="/common/index-classic-fullwidth-alt.html">Home classic fullwidth alt.</a></li>
+                          <li class="menu-item"><a href="/common/index-grid-fullwidth.html">Home grid fullwidth</a></li>
+                          <li class="menu-item"><a href="/common/index-grid-sidebar.html">Home grid sidebar</a></li>
+                          <li class="menu-item"><a href="/common/index-list-fullwidth.html">Home list fullwidth</a></li>
+                          <li class="menu-item"><a href="/common/index-list-sidebar.html">Home list sidebar</a></li>
+                        </ul>
+                      </li>
+                      <li class="menu-item"><a href="/common/about.html">About</a></li>
+                      <li class="menu-item"><a href="/common/contact.html">Contact</a></li>
+                      <li class="menu-item menu-item-has-children" aria-haspopup="true"><a href="#">Blog</a>
+                        <ul class="sub-menu">
+                          <li class="menu-item"><a href="/common/post-format.html">Post Formats</a></li>
+                          <li class="menu-item"><a href="#">Post Single</a>
+                            <ul class="sub-menu">
+                              <li class="menu-item"><a href="/common/single.html">Single</a></li>
+                              <li class="menu-item"><a href="/common/single-quote.html">Single Quote</a></li>
+                              <li class="menu-item"><a href="/common/single-gallery.html">Single Gallery</a></li>
+                              <li class="menu-item"><a href="/common/single-video.html">Single Video</a></li>
+                              <li class="menu-item"><a href="/common/single-audio.html">Single Audio</a></li>
+                              <li class="menu-item"><a href="/common/single-image.html">Single Image</a></li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="menu-item menu-item-has-children" aria-haspopup="true"><a href="#">Portfolio</a>
+                        <ul class="sub-menu">
+                          <li class="menu-item"><a href="/common/portfolio.html">Portfolio</a></li>
+                          <li class="menu-item"><a href="/common/single-portfolio.html">Portfolio Single</a></li>
+                          <li class="menu-item"><a href="/common/archive-portfolio.html">Portfolio Archive</a></li>
+                        </ul>
+                      </li>
+                      <li class="menu-item menu-item-has-children" aria-haspopup="true"><a href="#">Pages</a>
+                        <ul class="sub-menu">
+                          <li class="menu-item"><a href="/common/archive.html">Archive</a></li>
+                          <li class="menu-item"><a href="/common/category.html">Category</a></li>
+                          <li class="menu-item"><a href="/common/search.html">Search</a></li>
+                          <li class="menu-item"><a href="/common/page.html">Page</a></li>
+                          <li class="menu-item"><a href="/common/404.html">404 Page</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div>
+                </nav><!-- #site-navigation -->
+              </div><!-- .col-sm-8 -->
+            </div><!-- .row -->
+          </div><!-- .container -->
+        </header><!-- #masthead -->
+      </div><!-- .site-header-affix-wrapper -->
+
+    </div><!-- #page -->
+
+  </body>
+</html>
