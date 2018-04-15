@@ -5,6 +5,9 @@ public class ServiceException extends Exception {
 	private static final long serialVersionUID = 8285381305025666854L;
 	private int exceptionType = 0;//regular error
 	
+	
+	public final static int EXCEPTION_VALIDATION = 99;
+	
 	private String messageCode = null;
 	
 	public void setMessageCode(String messageCode) {

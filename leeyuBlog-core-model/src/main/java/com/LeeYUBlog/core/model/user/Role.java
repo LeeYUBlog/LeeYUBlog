@@ -1,5 +1,8 @@
 package com.LeeYUBlog.core.model.user;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
@@ -9,6 +12,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.persistence.TableGenerator;
 import javax.validation.constraints.NotNull;
@@ -51,6 +55,9 @@ public class Role extends LeeYUBlogEntity<Integer, Role> implements Auditable{
 	public Role(String roleName){
 		this.roleName = roleName;
 	}
+	
+	@ManyToMany(mappedBy = "roles")
+	private Set<Permission> permissions = new HashSet<Permission>();
 	
 	@Embedded
 	private AuditSection auditSection = new AuditSection();

@@ -1,0 +1,26 @@
+{
+	"permission": [
+		{
+			"type": "BLOG_ADMIN",
+			"role": {
+				"name": [
+					"SUPERADMIN",
+					"ADMIN"
+				]
+			}
+		},
+		{
+			"type": "SUPERADMIN",
+        	"role": { "name": ["SUPERADMIN"] }
+		},
+		{
+			"type": "ADMIN",
+	        "role": {
+	          "name": [
+	            "SUPERADMIN",
+	            "ADMIN"
+	          ]
+	        }
+		}
+	]
+}

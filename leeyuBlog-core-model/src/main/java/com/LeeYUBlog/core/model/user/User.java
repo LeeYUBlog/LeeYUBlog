@@ -16,6 +16,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.TableGenerator;
 import javax.persistence.Temporal;
@@ -29,6 +30,7 @@ import com.LeeYUBlog.core.model.common.audit.AuditListener;
 import com.LeeYUBlog.core.model.common.audit.AuditSection;
 import com.LeeYUBlog.core.model.common.audit.Auditable;
 import com.LeeYUBlog.core.model.generic.LeeYUBlogEntity;
+import com.LeeYUBlog.core.model.reference.language.Language;
 
 @Entity
 @EntityListeners(value = AuditListener.class)
@@ -79,8 +81,36 @@ public class User extends LeeYUBlogEntity<Long, User> implements Auditable{
 	@Column(name = "ADMIN_PASSWORD", length = 60)
 	private String adminPassword;
 	
+	@Column(name="ADMIN_FIRST_NAME")
+	private String firstName;
+	
+	@Column(name="ADMIN_LAST_NAME")
+	private String lastName;
+	
 	@Column(name="ACTIVE")
 	private boolean active = true;
+	
+	@ManyToOne(fetch = FetchType.LAZY, targetEntity = Language.class)
+	@JoinColumn(name = "LANGUAGE_ID")
+	private Language defaultLanguage;
+	
+	@Column(name="ADMIN_Q1")
+	private String question1;
+	
+	@Column(name="ADMIN_Q2")
+	private String question2;
+	
+	@Column(name="ADMIN_Q3")
+	private String question3;
+	
+	@Column(name="ADMIN_A1")
+	private String answer1;
+	
+	@Column(name="ADMIN_A2")
+	private String answer2;
+	
+	@Column(name="ADMIN_A3")
+	private String answer3;
 	
 	@Embedded
 	private AuditSection auditSection = new AuditSection();
@@ -159,5 +189,77 @@ public class User extends LeeYUBlogEntity<Long, User> implements Auditable{
 
 	public void setLoginTime(Date loginTime) {
 		this.loginTime = loginTime;
+	}
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	public Language getDefaultLanguage() {
+		return defaultLanguage;
+	}
+
+	public void setDefaultLanguage(Language defaultLanguage) {
+		this.defaultLanguage = defaultLanguage;
+	}
+
+	public String getQuestion1() {
+		return question1;
+	}
+
+	public void setQuestion1(String question1) {
+		this.question1 = question1;
+	}
+
+	public String getQuestion2() {
+		return question2;
+	}
+
+	public void setQuestion2(String question2) {
+		this.question2 = question2;
+	}
+
+	public String getQuestion3() {
+		return question3;
+	}
+
+	public void setQuestion3(String question3) {
+		this.question3 = question3;
+	}
+
+	public String getAnswer1() {
+		return answer1;
+	}
+
+	public void setAnswer1(String answer1) {
+		this.answer1 = answer1;
+	}
+
+	public String getAnswer2() {
+		return answer2;
+	}
+
+	public void setAnswer2(String answer2) {
+		this.answer2 = answer2;
+	}
+
+	public String getAnswer3() {
+		return answer3;
+	}
+
+	public void setAnswer3(String answer3) {
+		this.answer3 = answer3;
 	}
 }

@@ -21,8 +21,10 @@ import org.springframework.stereotype.Service;
 
 import com.LeeYUBlog.common.constants.Constants;
 import com.LeeYUBlog.core.business.constants.SystemConstants;
+import com.LeeYUBlog.core.business.services.user.PermissionService;
 import com.LeeYUBlog.core.business.services.user.RoleService;
 import com.LeeYUBlog.core.business.services.user.UserService;
+import com.LeeYUBlog.core.model.user.Permission;
 import com.LeeYUBlog.core.model.user.Role;
 import com.LeeYUBlog.core.model.user.RoleType;
 
@@ -48,6 +50,9 @@ public class UserServicesImpl implements WebUserServices {
 	//@Inject
 	//@Named("passwordEncoder")
 	private PasswordEncoder passwordEncoder = new BCryptPasswordEncoder(11);
+	
+	@Inject
+	protected PermissionService  permissionService;
 	
 	@Inject
 	protected RoleService roleService;
@@ -80,6 +85,12 @@ public class UserServicesImpl implements WebUserServices {
 				
 			}
 			
+			List<Permission> permissions = permissionService.getPermissions(rolesId);
+			for(Permission permission : permissions) {
+	    		GrantedAuthority auth = new SimpleGrantedAuthority(ROLE_PREFIX + permission.getPermissionName());
+	    		authorities.add(auth);
+	    	}
+			
 		}catch (Exception e) {
 			LOGGER.error("Exception while querrying user",e);
 			throw new SecurityDataAccessException("Exception while querrying user",e);
@@ -92,12 +103,16 @@ public class UserServicesImpl implements WebUserServices {
 
 	@Override
 	public void createDefaultAdmin() throws Exception {
+		
+		//TODO create all groups and permissions
 			
 		String password = passwordEncoder.encode(DEFAULT_INITIAL_PASSWORD);
 		
 		List<Role> roles = roleService.listRole(RoleType.ADMIN);
 		//creation of the super admin admin:admin)
 		com.LeeYUBlog.core.model.user.User user = new com.LeeYUBlog.core.model.user.User("admin",password);
+		user.setFirstName("Huinan");
+		user.setLastName("LUO");
 		
 		for(Role role : roles) {
 			if(role.getRoleName().equals(Constants.ROLE_SUPERADMIN) || role.getRoleName().equals(Constants.ROLE_ADMIN)) {
