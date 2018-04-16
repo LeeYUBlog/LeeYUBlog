@@ -20,7 +20,7 @@ public class PermissionRepositoryImpl implements PermissionRepositoryCustom {
 	public PermissionList listByCriteria(PermissionCriteria criteria) {
 		PermissionList permissionList = new PermissionList();
 		
-		//使用StringBuilder可以提高字符串拼接效率
+		//
 		StringBuilder countBuilderSelect = new StringBuilder();
 		countBuilderSelect.append("select count(p) from Permission as p");
 		

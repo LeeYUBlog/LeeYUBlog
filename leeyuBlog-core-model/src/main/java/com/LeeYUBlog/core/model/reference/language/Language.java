@@ -1,6 +1,5 @@
 package com.LeeYUBlog.core.model.reference.language;
 
-import javax.persistence.Cacheable;
 import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
@@ -20,7 +19,6 @@ import com.LeeYUBlog.core.model.generic.LeeYUBlogEntity;
 @Entity
 @EntityListeners(value = AuditListener.class)
 @Table(name = "LANGUAGE", schema=SchemaConstant.LEEYUBLOG_SCHEMA)
-@Cacheable
 public class Language extends LeeYUBlogEntity<Integer, Language> implements Auditable {
 
 	private static final long serialVersionUID = -7573846480366784058L;

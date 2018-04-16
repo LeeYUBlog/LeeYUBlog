@@ -80,7 +80,7 @@ public class InitializationLoader {
 				
 				Permissions permissions= jacksonObjectMapper.readValue(permissionXML,Permissions.class);
 				
-				//所有默认的数据都会在这里被创建
+				//
 				
 				LOGGER.info(String.format("%s : LeeYUBlog database is empty, populate it....", "leeyuBlog-web"));
 				

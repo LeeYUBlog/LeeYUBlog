@@ -42,7 +42,7 @@ public class PermissionServiceImpl extends LeeYUBlogEntityServiceImpl<Integer, P
 	
 	@Override
 	public void deletePermission(Permission permission) throws ServiceException {
-		permission = this.getById(permission.getId());//防止附带的实体报错
+		permission = this.getById(permission.getId());
 		permission.setRoles(null);
 		
 		this.delete(permission);
@@ -63,7 +63,7 @@ public class PermissionServiceImpl extends LeeYUBlogEntityServiceImpl<Integer, P
 	
 	@Override
 	public void removePermission(Permission permission, Role role) throws ServiceException {
-		permission = this.getById(permission.getId());//防止附带的实体报错
+		permission = this.getById(permission.getId());
 		
 		permission.getRoles().remove(role);
 		
