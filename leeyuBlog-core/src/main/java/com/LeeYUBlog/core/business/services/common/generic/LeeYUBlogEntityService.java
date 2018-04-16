@@ -3,8 +3,6 @@ package com.LeeYUBlog.core.business.services.common.generic;
 import java.io.Serializable;
 import java.util.List;
 
-import org.springframework.data.jpa.repository.Query;
-
 import com.LeeYUBlog.core.business.exception.ServiceException;
 
 
