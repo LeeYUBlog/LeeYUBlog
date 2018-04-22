@@ -1,62 +1,55 @@
 package com.LeeYUBlog.core.business.configuration;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CachingConfigurerSupport;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.data.redis.cache.RedisCacheManager;
 import org.springframework.data.redis.connection.RedisConnectionFactory;
-import org.springframework.data.redis.core.StringRedisTemplate;
-import org.springframework.data.redis.repository.configuration.EnableRedisRepositories;
 
 @Configuration
-@EnableRedisRepositories("com.LeeYUBlog.core.business.repositories")
-public class RedisConfiguration {
-	
-	@Autowired
-	private RedisConnectionFactory redisConnectionFactory;
+@EnableCaching
+public class RedisConfiguration extends CachingConfigurerSupport {
 	
 	@Bean
-	public StringRedisTemplate redisTemplate() {
-	  StringRedisTemplate template = new StringRedisTemplate(redisConnectionFactory);
-	  // explicitly enable transaction support
-	  template.setEnableTransactionSupport(true);
-	  return template;
+	public RedisCacheManager cacheManager(RedisConnectionFactory connectionFactory){
+		return RedisCacheManager.create(connectionFactory);
 	}
-	
 	/*@Bean
 	public RedisCustomConversions redisCustomConversions(){
-	    return new RedisCustomConversions(Arrays.asList(new AddressToBytesConverter(), new BytesToAddressConverter()));
+	    return new RedisCustomConversions(Arrays.asList(new UserToBytesConverter(), new BytesToUserConverter()));
 	}
 	
 	@WritingConverter
-	public static class AddressToBytesConverter implements Converter<Address, byte[]> {
+	public static class UserToBytesConverter implements Converter<User, byte[]> {
 
-	  private final Jackson2JsonRedisSerializer<Address> serializer;
+	  private final Jackson2JsonRedisSerializer<User> serializer;
 
-	  public AddressToBytesConverter() {
+	  public UserToBytesConverter() {
 
-	    serializer = new Jackson2JsonRedisSerializer<Address>(Address.class);
+	    serializer = new Jackson2JsonRedisSerializer<User>(User.class);
 	    serializer.setObjectMapper(new ObjectMapper());
 	  }
 
 	  @Override
-	  public byte[] convert(Address value) {
+	  public byte[] convert(User value) {
 	    return serializer.serialize(value);
 	  }
 	}
 
 	@ReadingConverter
-	public static class BytesToAddressConverter implements Converter<byte[], Address> {
+	public static class BytesToUserConverter implements Converter<byte[], User> {
 
-	  private final Jackson2JsonRedisSerializer<Address> serializer;
+	  private final Jackson2JsonRedisSerializer<User> serializer;
 
-	  public BytesToAddressConverter() {
+	  public BytesToUserConverter() {
 
-	    serializer = new Jackson2JsonRedisSerializer<Address>(Address.class);
+	    serializer = new Jackson2JsonRedisSerializer<User>(User.class);
 	    serializer.setObjectMapper(new ObjectMapper());
 	  }
 
 	  @Override
-	  public Address convert(byte[] value) {
+	  public User convert(byte[] value) {
 	    return serializer.deserialize(value);
 	  }
 	}*/

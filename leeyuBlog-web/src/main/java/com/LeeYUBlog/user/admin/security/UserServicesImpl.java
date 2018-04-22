@@ -9,6 +9,7 @@ import javax.inject.Inject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.dao.DataAccessException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -58,7 +59,8 @@ public class UserServicesImpl implements WebUserServices {
 	protected RoleService roleService;
 	
 	public final static String ROLE_PREFIX = "ROLE_";//Spring Security 4
-
+	
+	@Cacheable(value = "user")
 	@Override
 	public UserDetails loadUserByUsername(String userName) 
 			throws UsernameNotFoundException, DataAccessException {
