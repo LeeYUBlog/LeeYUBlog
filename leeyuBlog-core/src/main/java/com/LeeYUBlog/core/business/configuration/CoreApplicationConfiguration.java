@@ -12,7 +12,7 @@ import org.springframework.context.annotation.PropertySource;
 @EntityScan(basePackages = {"com.LeeYUBlog.core.model"})
 @ComponentScan({"com.LeeYUBlog.core.business.services","com.LeeYUBlog.core.business.utils"})
 @PropertySource("classpath:db.properties")
-@Import({DataSourceConfiguration.class,RedisConfiguration.class})
+@Import({DataSourceConfiguration.class,RedisConfiguration.class,GridFsConfiguration.class})
 public class CoreApplicationConfiguration {
 
 }
