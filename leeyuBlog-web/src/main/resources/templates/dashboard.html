@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link
+	href='../assets/css/backstage.css?family=Raleway:400,500,500italic,600,700,400italic'
+	rel='stylesheet' type='text/css'>
+<!-- Buttons 库的核心文件 -->
+<link href='../assets/css/buttons.css' rel='stylesheet' type='text/css'>
+<link href="../assets/css/font-awesome.min.css" rel="stylesheet">
+<link href="../assets/css/gallery.css" rel="stylesheet">
+<script type="text/javascript" src="../assets/plugins/jquery.min.js"></script>
+<script type="text/javascript" src="../assets/js/gallery.js"></script>
+
+<title>main</title>
+</head>
+<body>
+
+	<div class="page-wrapper">
+		<aside th:insert="adminSideBar :: adminSideBar" class="AdminSidebar"></aside>
+		<div class="PostEditor">
+			<div class="PostEditor__title" contentEditable="true">
+				&nbsp;&nbsp;BlogName: LeeYUBlog
+			</div>
+			<!-- content start -->
+			<div class="gallery">
+			  <div class="thumbnail-1 wow fadeInLeft">
+			    <img src="http://lorempixel.com/output/city-q-c-640-480-9.jpg" alt="" />
+			    <div class="caption">
+			      <h3 class="wow fadeInUp">San Francisco</h3>
+			    </div> 
+			  </div>
+			</div>
+			<div>
+			  <button class="button button-pill button-primary" style="margin-top:20px;margin-left:50px;">请选择</button>
+		      <button class="button button-pill button-primary" style="margin-top:20px;margin-left:50px;">上传</button>
+			</div> 
+			<!-- content end -->
+			
+		</div>
+		<aside th:insert="adminSideBar :: detailsSidebar" class="DetailSidebar"></aside>
+	</div>
+	<script src="../assets/js/bliss.min.js"></script>
+</body>
+</html>
